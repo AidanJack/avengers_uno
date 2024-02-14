@@ -2,8 +2,8 @@
 
 ### Authors
 
-Aidan Jackson
-Sandy 
+Aidan Jackson <br>
+Sandy <br>
 Tyler
 
 ### Purpose
