@@ -3,8 +3,8 @@
 ### Authors
 
 Aidan Jackson <br>
-Sandy <br>
-Tyler
+Sandy Lao<br>
+Tyler Syme
 
 ### Purpose
 
