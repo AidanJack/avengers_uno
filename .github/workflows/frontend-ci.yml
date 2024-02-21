@@ -18,6 +18,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+          
+      - name: Install missing peer dependency
+        run: npm install vite@^4.1.0-beta.0 --save-dev
 
       - name: Install dependencies
         run: npm install
