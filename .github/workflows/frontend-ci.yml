@@ -14,11 +14,11 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Navigate to project directory
+        run: cd frontend
+
       - name: Install dependencies
         run: npm install
-
-      - name: Navigate to project directory
-        run: cd avengers_uno/frontend
 
       - name: Build and test
         run: npm run dev
