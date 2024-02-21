@@ -15,7 +15,7 @@ jobs:
           node-version: '14'
 
       - name: Navigate to project directory
-        run: cd frontend
+        run: cd frontend && ls
 
       - name: Install dependencies
         run: npm install
