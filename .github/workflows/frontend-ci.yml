@@ -5,6 +5,11 @@ on: push
 jobs:
   frontend-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./frontend
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -13,9 +18,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-
-      - name: Navigate to project directory
-        run: cd frontend && ls
 
       - name: Install dependencies
         run: npm install
