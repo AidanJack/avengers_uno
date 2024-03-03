@@ -1,24 +1,41 @@
 from flask import Flask
 from classes.game import Game
+from classes.players import Player
+
+import json
 
 app = Flask(__name__)
 
-game = None # Replace with some sort of storage either database or flask sessions maybe?
+games = []
 
-@app.route('/')
-def createGame():
-    global game
-    if game is None:
-        game = Game()
-    return f''
-
-@app.route('/player/create')
-def createPlayer():
+@app.route('/game/start/<player1>/<player2>')
+def createGame(player1, player2):
     msg = f''
-    if game is not None:
-        msg = f'Player Added'
+    if len(games) == 0:
+        game = Game(player1, player2)  
+        games.append(game)
+        msg = f'Game Created'
     else:
-        msg = f'Player Could not be added'
+        msg = f'Game not Created'
+    return msg
+
+@app.route('/game/play/<cardID>/<cardColor>')
+def playCard(cardID, cardColor):
+    msg = f''
+    if len(games) != 0:
+        cardID = int(cardID)
+        msg = games[0].playTurn(cardID, cardColor)
+    else:
+        msg = f'Game not Created'
+    return msg
+
+@app.route('/game/view/hand/<playerName>')
+def getPlayerHand(playerName):
+    msg = f''
+    if len(games) != 0:
+        msg = games[0].getPlayerHand(playerName)
+    else:
+        msg = f'Cannot check hand, game not created.'
     return msg
 
 
