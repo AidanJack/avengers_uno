@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  background-color: #4b4541;
+  background-color: #999999;
 }

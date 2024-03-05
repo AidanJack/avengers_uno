@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center font-mono text-gray-200 text-4xl font-bold h-50 p-6 bg-gradient-to-r from-black via-red-700 to-black">
+      <h1 className="text-center font-cinzel  text-white text-5xl h-50 p-5 bg-gradient-to-r from-red-800 via-black to-red-800">
         Avengers Uno
       </h1>
     </div>
