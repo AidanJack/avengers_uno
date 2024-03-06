@@ -4,5 +4,12 @@
 @tailwind utilities;
 
 :root {
-  background-color: #999999;
+  @apply bg-gradient-to-r from-black via-red-800 to-black
+}
+
+.btn-gray {
+  @apply text-white bg-black font-medium font-cinzel py-2 px-20 rounded;
+}
+.btn-gray:hover {
+  @apply bg-gray-800;
 }

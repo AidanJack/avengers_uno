@@ -6,9 +6,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center font-cinzel  text-white text-5xl h-50 p-5 bg-gradient-to-r from-red-800 via-black to-red-800">
-        Avengers Uno
-      </h1>
+      <h1 className="text-center font-cinzel text-white text-6xl h-50 p-20">Avengers Uno</h1>
+      <button className="btn-gray">PLAY</button>
     </div>
   );
 }
